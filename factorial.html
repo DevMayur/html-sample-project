@@ -1,0 +1,133 @@
+<!doctype html>
+<html>
+<head> 
+<title> |factorial number by mayur  |</title>
+<meta name="description" content="Factorial calculator created by Dev.Mayur">
+  <meta name="keywords" content="HTML,CSS,angular,JavaScript">
+  <meta name="author" content="Mayur sharma">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+
+
+<link href="https://fonts.googleapis.com/css?family=Lobster" rel="stylesheet">
+<link href="https://fonts.googleapis.com/css?family=Bree+Serif" rel="stylesheet"> <!-- for input // font-family: 'Bree Serif', serif;-->
+<link href="https://fonts.googleapis.com/css?family=Questrial" rel="stylesheet"> <!-- for button // font-family: 'Questrial', sans-serif;-->
+<link href="https://fonts.googleapis.com/css?family=Righteous" rel="stylesheet"> <!--for heading //font-family: 'Righteous', cursive; -->
+<style>
+body{
+background-color:#02206F;
+}
+.wrapper{
+border-radius:30px;
+border:2px solid white;
+min-height:300px;
+width:450px;
+margin:auto;
+margin-top:50px;
+background-image:url(https://us.123rf.com/450wm/tonsofbackgrounds/tonsofbackgrounds1707/tonsofbackgrounds170700157/82314253-pink-green-blue-beautiful-gradient-colors-blend-background-design-in-high-resolution-soft-colors-for.jpg?ver=6);
+background-repeat:no-repeat;
+background-size:cover;
+padding:15px;
+box-shadow:0px 0px 25px 2px pink; 
+}
+#head{
+font-size:50px;
+color:black;
+text-shadow:2px 2px 2px white;
+font-family: 'Righteous', cursive;
+}
+form{
+padding:25px;
+border-radius:25px;
+border:2px dashed black;
+}
+input[type=text]{
+font-family: 'Bree Serif', serif;
+margin-top:10px;
+height:40px;
+width:300px;
+padding:5px;
+font-size:20px;
+font-weight:bold;
+text-align:center;
+border-radius:25px;
+border:1px solid white;
+}
+input[type=button]{
+font-family: 'Questrial', sans-serif;
+margin-top:10px;
+height:45px;
+width:250px;
+font-size:30px;
+border-radius:25px;
+background-color:green;
+color:white;
+border:none;
+}
+input[type=button]:hover{
+color:pink;
+cursor:pointer;
+box-shadow:5px 5px 10px 3px pink;
+}
+
+#head2{
+text-align:center;
+font-size:26px;
+margin-top:0px;
+font-family: 'Lobster', cursive; 
+color:white;
+text-shadow:5px 5px 10px black;
+}
+</style>
+</head>
+<body>
+<center><h2 id="head">factorial Calculation v.1</h2></center>
+<div class="wrapper" id="main">
+<form id="">
+<p id="head2">Enter a number to find factorial.</p>
+<center>
+<input type="text"  placeholder="Enter a number " id="num" required autofocus  autocomplete="off">
+<br>
+<input type="text" disabled  placeholder="result" id="answer" style="color:red;">
+<br>
+<input type="button" value="Get Number" onClick="fact()">
+<input type="reset" style="color:white; background-color:red;font-size:16px;" title="click to reset">
+</center>
+</form>
+<center><p style="margin-top:5px; font-weight:bold;font-family: 'Righteous', cursive;">Developed by Mayur sharma</p></center>
+</div>
+<script type="text/javascript">
+function fact(){
+var i,num,factorial;
+factorial = 1;
+num = document.getElementById("num").value;
+for(i=1; i<=num; i++)
+{
+factorial = factorial *i;
+}
+document.getElementById("answer").value="Factorial is " + factorial ;
+}
+
+</script>
+
+<script type="text/javascript"> 
+function random(n){ //random function is here 
+	return Math.floor(Math.random()*n)
+	}
+	function changeColor(){ //for text background
+		var p2 = document.getElementById('main');
+	p2.style.boxShadow = '0px 0px 125px 50px rgb('+ random(255)+ ',' + random(255)+ ','+ random(255)+')';
+	/* p2.style.background ='rgb('+ random(255)+ ',' + random(255)+ ','+ random(255)+')'; */
+	
+	}
+
+	setInterval(changeColor,200);
+
+</script>
+
+
+
+
+
+</body>
+</html>
